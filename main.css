@@ -1,0 +1,16 @@
+header{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 70px;
+}
+
+#regform{
+    margin-top: 50px;
+}
+#buttonholder{
+    text-align: center;
+}
+
+#buttonholder button{
+    display: block;
+    margin-left: 42%;
+}
