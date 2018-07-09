@@ -1,0 +1,11 @@
+header{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 70px;
+}
+#autho{
+    margin-top: 120px;
+}
+
+#lbtn:hover{
+    background-color: orange;
+}
