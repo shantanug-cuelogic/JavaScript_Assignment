@@ -21,8 +21,7 @@
                 <nav>
                     <input type="button" value="List" id="listbtn" onclick="listbtn()" >
                     <input type="button" value="Logout" id="logout" onclick="logout()">
-                    <input type="button" value="Edit" id="editbtn" onclick="">
-        
+                    
                 </nav>
         </header>
         <section>
@@ -36,22 +35,37 @@
                     <tr>
                         <td>Fristname</td>
                         <td id="fname"></td>
+                        <td><input type="button" value="Edit" id="editbtn" onclick="editcontent('fname')">
+                        </td>
                     </tr>
                     <tr>
                             <td>Lastname</td>
                             <td id="lname"></td>
-                    </tr>
-                    <tr>
-                            <td>Email</td>
-                            <td id="email"></td>
-                    </tr>
-                    <tr>
-                            <td>Address</td>
-                            <td id="addr"></td>
+                            <td><input type="button" value="Edit" id="editbtn" onclick="editcontent('lname')">
+                            </td>
                     </tr>
                     <tr>
                             <td>Gender</td>
                             <td id="gen"></td>
+                            <td><input type="button" value="Edit" id="editbtn" onclick="editcontent('gen')">
+                            </td>
+                    </tr>
+                    <tr>
+                            <td>Address</td>
+                            <td id="addr"></td>
+                            <td><input type="button" value="Edit" id="editbtn" onclick="editcontent('addr')">
+                            </td>
+                    </tr>
+                    <tr>
+                            <td>Image</td>
+                            <td id="gen"></td>
+                            <td><input type="button" value="Edit" id="editbtn" onclick="editcontent('gen')">
+                            </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="Save" id="savebtn" onclick="savecontent()">
+                        </td>
                     </tr>
                 </table>
 

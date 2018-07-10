@@ -32,7 +32,7 @@ if(validateEmail(Email))
             if(Lastname.length!= 0)
             {
                 
-                register();
+                register(Email,Firstname,Lastname,Gender,Image,Address,Password);
               alert("Registered Succesfully");
                // window.open("list.html", "_self");
               window.location.href="Pages/list.html";
