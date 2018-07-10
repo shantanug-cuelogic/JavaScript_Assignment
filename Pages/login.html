@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link type="text/css" rel="stylesheet" href="../normalize.css">
-    <link type="text/css" rel="stylesheet" href="login.css">    
+    <link type="text/css" rel="stylesheet" href="../css/login.css">    
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -20,7 +20,7 @@
         </header>
         <section class="row">
             <div class="col-sm-4 col-sm-offset-4">
-                <img src="/Images/Logo.png" height="100px">
+                <img src="../Images/Logo.png" height="100px">
             </div>
         </section>
 
@@ -42,7 +42,7 @@
                         </div>
                         </div>
                         <div class="col-sm-4 col-sm-offset-4">
-                        <button type="submit" class="btn btn-default btn-block" onclick="" id="lbtn">Login</button>
+                        <input type="button" class="btn btn-default btn-block" onclick="logincheck()" id="lbtn" value="Login" ></input>
                         </div>   
                 </form>
             </div>
@@ -50,4 +50,5 @@
         </section>
         
 </body>
+<script src="../Javascript/logincheck.js"></script>
 </html>

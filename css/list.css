@@ -1,0 +1,26 @@
+header{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 70px;
+}
+body{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+ nav{
+   
+  float: right;
+  margin-right: 100px;
+     
+ }
+#hname{
+
+    margin-top: 0px;
+    margin-bottom: 10px;
+   
+}
+
+ #headertitle{
+margin-top: 0px;
+display: inline;
+
+ }
