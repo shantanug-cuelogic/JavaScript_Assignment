@@ -1,10 +1,69 @@
+.wrapper{
+    width:1120px;
+    margin: 0 auto;
+    text-align: center;
+}
 header{
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     height: 70px;
+    border-radius: 30px;
+}
+
+#heading{
+    float: left;
+    margin-left: 70px;
+}
+#heading img{
+    margin-top: 5px;
+    float: left;
+}
+
+#heading h1{
+    color: white;
+    margin-top: 15px;
+    float: left;
+}
+nav{
+    float: right;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+.navbutton{
+    list-style-type: none;
+}
+
+.navbutton li{
+    display: inline;
+border-radius: 20px;
+color:black;
+background-color: white;
+margin-right: 30px;
+
+height: 40px;
+width: 100px;
+padding: 10px;
+font-size: 15px;    
+font-weight: bolder;
+}
+
+.navbutton li:hover{
+background-color: orange;   
+}
+
+
+#imagecontainer{
+    margin-top: 20px;
+    margin-right: 300px;
+    margin-left: 300px; 
+}
+
+
+#imagecontainer h1{
+font-size: 40px;
 }
 
 #regform{
-    margin-top: 50px;
+    margin-top: 20px;
 }
 #buttonholder{
     text-align: center;
