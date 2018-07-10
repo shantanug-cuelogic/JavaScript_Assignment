@@ -7,4 +7,13 @@ header{
     margin-top: 0px;
     display: inline;
     
-     }
+}
+nav{
+   
+    float: right;
+    margin-right: 100px;
+       
+   }
+#tablecontainer{
+    margin-top:30px;
+}

@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="../css/profile.css" type="text/css" rel="stylesheet">
     <link href="../css/normalize.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
     <title>Document</title>
 </head>
 <body>
@@ -13,8 +17,47 @@
                 <div class="page-header">
                     <h2 id="headertitle">Todo</h2>
                 </div>
+                     
+                <nav>
+                    <input type="button" value="List" id="listbtn" onclick="listbtn()" >
+                    <input type="button" value="Logout" id="logout" onclick="logout()">
+                    <input type="button" value="Edit" id="editbtn" onclick="">
         
-            </header>
+                </nav>
+        </header>
+        <section>
+            <div class="col-sm-6 col-sm-offset-3" id="tablecontainer">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Information</th>
+                    </tr>
+                </thead>
+                    <tr>
+                        <td>Fristname</td>
+                        <td id="fname"></td>
+                    </tr>
+                    <tr>
+                            <td>Lastname</td>
+                            <td id="lname"></td>
+                    </tr>
+                    <tr>
+                            <td>Email</td>
+                            <td id="email"></td>
+                    </tr>
+                    <tr>
+                            <td>Address</td>
+                            <td id="addr"></td>
+                    </tr>
+                    <tr>
+                            <td>Gender</td>
+                            <td id="gen"></td>
+                    </tr>
+                </table>
+
+            </div>
+        </section>
     
 </body>
+<script src="../Javascript/profile.js"></script>
 </html>
