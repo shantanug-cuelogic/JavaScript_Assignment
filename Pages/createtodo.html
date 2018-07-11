@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../css/createtodo.css" type="text/css" rel="stylesheet">
+    <link href="../css/normalize.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <title>TODOing!</title>
+</head>
+<body>
+        <header >
+                <div id="heading">
+                        <img src="../Images/Logow.png" height="60px">
+                        <h1>TODOing!</h1>
+                    </div>
+                <nav>
+                    <input type="button" value="Profile" id="profile" onclick="profile()" >
+                    <input type="button" value="Logout" id="logout" onclick="logout()">
+                </nav>
+        </header>
+        <section>
+            <div class="container-fluid">
+                
+                <div class="col-sm-12 well text-center">
+                        <div class="col-sm-12 row">    
+                    <form>
+                                            
+                         <div class="form-group col-sm-4 well">
+                            <label for="tname">Todo Name:</label>
+                             <input type="text" class="form-control" id="tname" placeholder="Enter Todo Name" name="tname">
+                        </div>
+                                   
+                        <div class="form-group col-sm-4 well" style="height: 100px">
+                            <label for="category">Select Category:</label>
+                                <select id="category">
+                                    <option>Personal</option>
+                                    <option>Office</option>
+                                    <option>Social</option>
+                                </select>
+                        </div>         
+                     
+                        <div class=" form-group col-sm-4 well">
+                                <label for="duedate">Due Date:</label>
+                                <input type="date" class="form-control" id="duedate" name="date">    
+                        </div>
+                    </div>
+                    <div class="col-sm-12 row">
+                        <div class="col-sm-4 col-sm-offset-2 well form-group">
+                                <label>Set Reminder</label>   
+                        <input type="checkbox" id="remindercheck" onclick="addreminder()"> 
+                        <input type="date" class="form-control" id="remindedate" name="remindedate" style="display: none;">    
+                        </div>
+                        <div class="col-sm-4 well">2</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+</body>
+<script src="../Javascript/createtodo.js"></script>
+</html>

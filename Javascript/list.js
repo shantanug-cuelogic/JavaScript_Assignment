@@ -18,3 +18,7 @@ function registration()
 {
     window.location.href="../index.html";
 }
+
+function createtodo(){
+    window.location.href="createtodo.html";
+}

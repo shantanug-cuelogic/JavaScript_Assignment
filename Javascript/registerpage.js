@@ -32,6 +32,7 @@ function register(){
       Image : Image ,
       Address : Address ,
       Password : Password,
+      Todo : [],
      }
 
     database.push(newdb);

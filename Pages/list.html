@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="../css/list.css" type="text/css" rel="stylesheet">
     <link href="../css/normalize.css" type="text/css" rel="stylesheet">
-
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <title>TODOIng!</title>
 </head>
 <body>
         <header >
@@ -28,8 +31,8 @@
         </section>
         <section id="buttonsection">
             <div class="wrapper" id="buttoncontainer">
-            <input type="button" value="Create" id="createbtn">
-            <input type="button" value="Delete" id="deletebtn">
+            <input type="button" value="Create" id="createbtn" onclick="createtodo()" >
+            <input type="button" value="Delete" id="deletebtn" onclick="deletetodo()" >
             </div>     
         </section>
         <section>
