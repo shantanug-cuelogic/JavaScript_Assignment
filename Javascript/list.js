@@ -142,15 +142,38 @@ function done(x){
 }
 
 function displayoption(){
-    if(document.getElementById('filteroption').style.display=="none")
-    {  
-          document.getElementById('filteroption').style.display="inline";
-    }
-    else
-    {
-        document.getElementById('filteroption').style.display="none";
-    }     
+   document.getElementById("filterbtncategory").style.display="inline";
+   document.getElementById("filterbtnstatus").style.display="inline";
+   document.getElementById("filterbtn").style.display="none"; 
 }
+
+function displayoptioncategory(){
+    if(document.getElementById("filterbtnstatus").style.display == "none")
+    {
+        document.getElementById("filterbtnstatus").style.display="inline";    
+        document.getElementById("filteroptioncategory").style.display="none";
+    }
+    else{
+        document.getElementById("filterbtnstatus").style.display="none";
+    document.getElementById("filteroptioncategory").style.display="inline";
+    }
+    
+}
+
+function displayoptionstatus(){
+    if(document.getElementById("filterbtncategory").style.display == "none")
+    {
+        document.getElementById("filterbtncategory").style.display="inline";    
+        document.getElementById("filteroptionstatus").style.display="none";
+    }
+    else{
+        document.getElementById("filterbtncategory").style.display="none";
+    document.getElementById("filteroptionstatus").style.display="inline";
+    }
+    
+}
+
+
 
 function showfiltertable (fi)
 {
@@ -225,7 +248,7 @@ function showfiltertable (fi)
             //var r =document.createTextNode("data");
             q.appendChild(button);
             document.getElementById("listtr"+fi).appendChild(q);
-     alert("stop");
+     
         }
         
         
@@ -233,14 +256,16 @@ function showfiltertable (fi)
 
 
 
-function filterresult(){
+function filterresult(option){
 
     for(var k=0;k<data[index].Todo.length;k++){
         var Table = document.getElementById("listtr"+k);
       Table.innerHTML = "";
       }
 
-      var method = document.getElementById("filteroption").value;
+     if(option ==2 )
+     { 
+      var method = document.getElementById("filteroptionstatus").value;
       if(method == "pending")
       {
         for(var i=0;i<data[index].Todo.length;i++)
@@ -266,5 +291,48 @@ function filterresult(){
                  }
           }
       }
+    }
+    else if(option == 1)
+    {
+        var method = document.getElementById("filteroptioncategory").value;
+        if(method == "personal")
+      {
+        for(var i=0;i<data[index].Todo.length;i++)
+          {
+       
+            if(data[index].Todo[i].Category=="Personal")
+                {
+                console.log(i);
+                showfiltertable(i);
+                 }
+          }
+      }
+      else if(method == "office")
+      {
+        for(var i=0;i<data[index].Todo.length;i++)
+          {
+       
+            if(data[index].Todo[i].Category=="Office")
+                {
+                console.log(i);
+                showfiltertable(i);
+                 }
+          }
+      }
+      
+      else if(method == "social")
+      {
+        for(var i=0;i<data[index].Todo.length;i++)
+          {
+       
+            if(data[index].Todo[i].Category=="Social")
+                {
+                console.log(i);
+                showfiltertable(i);
+                 }
+          }
+      }
+
+    }
 
 }

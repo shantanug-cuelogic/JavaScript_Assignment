@@ -33,16 +33,16 @@
             <div class="wrapper" id="buttoncontainer">
             <input type="button" value="Create" id="createbtn" onclick="createtodo()" >
             <input type="button" value="Delete" id="deletebtn" onclick="deletetodo()" >
-            <input type="button" value="Filter" id="filterbtn" onclick="displayoption()">
-            <input type="button" value="By Category" id="filterbtn" onclick="displayoption()" style="display: none;">
-            <input type="button" value="By Status" id="filterbtn" onclick="displayoption()" style="display: none;" >    
+            <input type="button" value="Filter" id="filterbtn" onclick="displayoption()" style="display: inline;">
+            <input type="button" value="By Category" id="filterbtncategory" onclick="displayoptioncategory()" style="display: none;">
+            <input type="button" value="By Status" id="filterbtnstatus" onclick="displayoptionstatus()" style="display: none;" >    
 
-                <select style="display: none" id="filteroption" onchange="filterresult()">
-                    <option value="pending">Pending</option>
-                    <option value="complete">Completed</option>
-                    
+                <select style="display: none" id="filteroptioncategory" onchange="filterresult(1)">
+                    <option value="personal">Personal</option>
+                    <option value="office">Office</option>
+                    <option value="social">Social</option>
                 </select>
-                <select style="display: none" id="filteroption" onchange="filterresult()">
+                <select style="display: none" id="filteroptionstatus" onchange="filterresult(2)">
                     <option value="pending">Pending</option>
                     <option value="complete">Completed</option>
                     
