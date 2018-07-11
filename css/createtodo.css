@@ -52,3 +52,27 @@ display: inline;
  nav input:hover{
      background-color: orange;
  }
+
+ #buttoncontainer{
+     background-color: rgba(0, 0, 0, 0.9);
+     border-radius: 40px;
+ }
+
+#addtodobtn{
+    background-color: white;
+    font-weight: bolder;
+    border-radius: 20px;
+    margin-right: 20px;
+    border: none;
+    height: 40px;
+   width: 150px;
+   font-size: 15px;
+}
+
+#addtodobtn:hover{
+    background-color: orange;
+}
+
+#todofieldscontainer{
+    margin-top: 30px;
+}

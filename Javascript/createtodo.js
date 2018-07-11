@@ -1,7 +1,9 @@
 var user = localStorage.getItem("username");
 var data = JSON.parse(localStorage.getItem("data"));
 
-
+function tolist(){
+    window.location.href="list.html";
+}
 
 function logout()
 {
@@ -28,4 +30,8 @@ else
     showdate.style.display="none";
 }
 
+}
+
+function addtodo(){
+    alert("in function");
 }

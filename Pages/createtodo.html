@@ -19,14 +19,16 @@
                         <h1>TODOing!</h1>
                     </div>
                 <nav>
+                        <input type="button" value="List" id="tolist" onclick="tolist()">
                     <input type="button" value="Profile" id="profile" onclick="profile()" >
                     <input type="button" value="Logout" id="logout" onclick="logout()">
+                   
                 </nav>
         </header>
         <section>
             <div class="container-fluid">
                 
-                <div class="col-sm-12 well text-center">
+                <div class="col-sm-12 text-center" id="todofieldscontainer">
                         <div class="col-sm-12 row">    
                     <form>
                                             
@@ -50,12 +52,26 @@
                         </div>
                     </div>
                     <div class="col-sm-12 row">
-                        <div class="col-sm-4 col-sm-offset-2 well form-group">
-                                <label>Set Reminder</label>   
+                        <div class="col-sm-4 col-sm-offset-2 well form-group" style="height: 140px;">
+                        <div>
+                            <label for="remindercheck">Set Reminder</label>   
                         <input type="checkbox" id="remindercheck" onclick="addreminder()"> 
+                    </div>
                         <input type="date" class="form-control" id="remindedate" name="remindedate" style="display: none;">    
+                        <label for="publiccheck">Make TODO public</label>   
+                        <input type="checkbox" id="publiccheck" onclick="addpublic()" >   
+                    </div>
+                        <div class="col-sm-4 well" style="height: 140px;">
+                            <label for="todonote" style="display: block;">Add Todo Note:</label>
+                            <textarea id="todonote" rows="3" cols="30"></textarea>
                         </div>
-                        <div class="col-sm-4 well">2</div>
+
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="col-sm-4 well col-sm-offset-4" id="buttoncontainer">
+                            <input type="button" onclick="addtodo()" id="addtodobtn" value="Add Todo">
+
+                        </div>
 
                     </div>
                 </div>
