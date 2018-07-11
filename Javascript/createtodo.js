@@ -79,7 +79,8 @@ var todoobj = {
     Duedate:Duedate,
     Reminder:Reminder,
     Public:Public,
-    Todonote:Todonote
+    Todonote:Todonote,
+    Status: "Pending",
 }
 
 data[index].Todo.push(todoobj);
