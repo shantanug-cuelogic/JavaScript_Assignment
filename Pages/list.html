@@ -33,8 +33,23 @@
             <div class="wrapper" id="buttoncontainer">
             <input type="button" value="Create" id="createbtn" onclick="createtodo()" >
             <input type="button" value="Delete" id="deletebtn" onclick="deletetodo()" >
-            </div>     
+            <input type="button" value="Filter" id="filterbtn" onclick="displayoption()">
+            <input type="button" value="By Category" id="filterbtn" onclick="displayoption()" style="display: none;">
+            <input type="button" value="By Status" id="filterbtn" onclick="displayoption()" style="display: none;" >    
+
+                <select style="display: none" id="filteroption" onchange="filterresult()">
+                    <option value="pending">Pending</option>
+                    <option value="complete">Completed</option>
+                    
+                </select>
+                <select style="display: none" id="filteroption" onchange="filterresult()">
+                    <option value="pending">Pending</option>
+                    <option value="complete">Completed</option>
+                    
+                </select>    
+        </div>     
         </section>
+        
         <section>
             <div id="tablecontainer" class="wrapper">
                 <table class="table table-bordered" id="listtable">
@@ -52,6 +67,9 @@
                             <td>Button</td>
                         </tr>
                     </thead>
+                    <tbody>
+
+                    </tbody>
                 </table>
 
             </div>
