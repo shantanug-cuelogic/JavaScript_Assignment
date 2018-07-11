@@ -19,10 +19,38 @@
                     <input type="button" value="Profile" id="profile" onclick="profile()" >
                     <input type="button" value="Logout" id="logout" onclick="logout()">
                 </nav>
-                
+                                
         </header>
-        
-        <h5 id="hname"></h5>
+        <section >
+            <div id="usercontainer" class="wrapper">
+                    <h5 id="hname"></h5>
+            </div>
+        </section>
+        <section id="buttonsection">
+            <div class="wrapper" id="buttoncontainer">
+            <input type="button" value="Create" id="createbtn">
+            <input type="button" value="Delete" id="deletebtn">
+            </div>     
+        </section>
+        <section>
+            <div id="tablecontainer" class="wrapper">
+                <table border="2px">
+                    <thead>
+                        <tr>
+                            <td>Select</td>
+                            <td>Name</td>
+                            <td>Category</td>
+                            <td>DueDate</td>
+                            <td>Status</td>
+                            <td>Button</td>
+                        </tr>
+                    </thead>
+                </table>
+
+            </div>
+        </section>
+
+
 </body>
 <script src="../Javascript/list.js"></script>
 </html>
