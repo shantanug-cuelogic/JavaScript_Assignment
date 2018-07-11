@@ -12,7 +12,7 @@
     
     <title>TODOIng!</title>
 </head>
-<body>
+<body onload="showtable()">
         <header >
                 <div id="heading">
                         <img src="../Images/Logow.png" height="60px">
@@ -37,13 +37,16 @@
         </section>
         <section>
             <div id="tablecontainer" class="wrapper">
-                <table border="2px">
+                <table class="table table-bordered" id="listtable">
                     <thead>
                         <tr>
                             <td>Select</td>
                             <td>Name</td>
                             <td>Category</td>
                             <td>DueDate</td>
+                            <td>Reminder</td>
+                            <td>Public</td>
+                            <td>Note</td>
                             <td>Status</td>
                             <td>Button</td>
                         </tr>
