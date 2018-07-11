@@ -11,13 +11,22 @@ for(i=0;i<data.length;i++)
         break;
     }
 }
-console.log(data[index].Firstname);
+console.log(data[index].Address);
 
-document.getElementById('fname').innerHTML=data[index].Firstname;
-document.getElementById('lname').innerHTML=data[index].Lastname;
+document.getElementById("email").value = data[index].Email;
+document.getElementById("fname").value = data[index].Firstname;
+document.getElementById("lname").value = data[index].Lastname;
+//document.getElementById("img").value = data[index].Image;
+document.getElementById("addr").value = data[index].Address;
 
-document.getElementById('addr').innerHTML=data[index].Address;
-document.getElementById('gen').innerHTML=data[index].Gender;
+document.getElementById("email").readOnly=true;
+document.getElementById("fname").readOnly=true;
+document.getElementById("lname").readOnly=true;
+document.getElementById("img").readOnly=true;
+document.getElementById("addr").readOnly=true;
+
+
+
 
 function listbtn()
 {
@@ -29,19 +38,27 @@ function logout(){
     window.location.href="login.html";
 }
 
-function editcontent(id){
- document.getElementById(id).contentEditable=true;   
+function editcontent(){
+
+    document.getElementById("fname").readOnly=false;
+    document.getElementById("lname").readOnly=false;
+    document.getElementById("img").readOnly=false;
+    document.getElementById("addr").readOnly=false;
+    
 }   
 
 
 function savecontent(){
- data[index].Firstname= document.getElementById('fname').value;
- data[index].Lastname= document.getElementById('lname').value;
-  data[index].Address= document.getElementById('addr').value;
- data[index].Gender= document.getElementById('gen').value;
-   // localStorage.setItem("data",JSON.stringify(data));
-
-    register(Email,Firstname,Lastname,Gender,Image,Address,Password);
-
-
+    
+   
+    document.getElementById("fname").readOnly=true;
+    document.getElementById("lname").readOnly=true;
+    document.getElementById("img").readOnly=true;
+    document.getElementById("addr").readOnly=true;
+    
+    data[index].Firstname=document.getElementById("fname").value;
+    data[index].Lastname=document.getElementById("lname").value;
+    data[index].Image=document.getElementById("img").value;
+    data[index].Address=document.getElementById("addr").value;
+    localStorage.setItem("data",JSON.stringify(data));
 }   

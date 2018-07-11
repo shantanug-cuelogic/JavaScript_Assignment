@@ -24,52 +24,41 @@
                     
                 </nav>
         </header>
-        <section>
-            <div class="col-sm-6 col-sm-offset-3" id="tablecontainer">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>Information</th>
-                    </tr>
-                </thead>
-                    <tr>
-                        <td>Fristname</td>
-                        <td id="fname"></td>
-                        <td><input type="button" value="Edit" id="editbtn" onclick="editcontent('fname')">
-                        </td>
-                    </tr>
-                    <tr>
-                            <td>Lastname</td>
-                            <td id="lname"></td>
-                            <td><input type="button" value="Edit" id="editbtn" onclick="editcontent('lname')">
-                            </td>
-                    </tr>
-                    <tr>
-                            <td>Gender</td>
-                            <td id="gen"></td>
-                            <td><input type="button" value="Edit" id="editbtn" onclick="editcontent('gen')">
-                            </td>
-                    </tr>
-                    <tr>
-                            <td>Address</td>
-                            <td id="addr"></td>
-                            <td><input type="button" value="Edit" id="editbtn" onclick="editcontent('addr')">
-                            </td>
-                    </tr>
-                    <tr>
-                            <td>Image</td>
-                            <td id="gen"></td>
-                            <td><input type="button" value="Edit" id="editbtn" onclick="editcontent('gen')">
-                            </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="button" value="Save" id="savebtn" onclick="savecontent()">
-                        </td>
-                    </tr>
-                </table>
-
-            </div>
+        <section class=>
+            <div class="col-sm-6 col-sm-offset-3 well">
+                <form>
+                    <div class="form-group">
+                      <label for="email">Email/Username:</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="fname">First Name:</label>
+                      <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
+                    </div>
+                    <div class="form-group">
+                            <label for="lname">Last Name:</label>
+                            <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname">
+                    </div>
+                    
+                          
+                            <div class="col-sm-12">
+                                <label for="img">Image:</label>
+                            <input type="file" id="img" > 
+                        </div>
+                             
+                   
+                    <div class="form-group ">
+                        <label for="addr">Address:</label>
+                        <textarea class="form-control" id="addr"></textarea>
+                        
+                    </div>
+                    <div id="buttonholder">
+                        
+                        <input type="button" class="btn btn-default" onclick="editcontent()" value="Edit" ></input>
+                        <input type="button" class="btn btn-default" onclick="savecontent()" value="Update" ></input>
+                        
+                    </div>
+        </div>
         </section>
     
 </body>
