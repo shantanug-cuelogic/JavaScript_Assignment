@@ -1,6 +1,6 @@
 
 var user = localStorage.getItem("username");
-document.getElementById('hname').innerHTML=user;
+
 var data= JSON.parse(localStorage.getItem("data"));
 
 var index;
@@ -14,6 +14,8 @@ for(var i=0; i<data.length;i++ )
 }
 //console.log(data[index].Todo.Status);
 
+var fullname = data[index].Firstname + " " + data[index].Lastname;
+document.getElementById('hname').innerHTML=fullname;
 function logout()
 {
     localStorage.setItem("username",null);
@@ -40,7 +42,7 @@ function showtable(){
     // old_tbody.parentNode.replaceChild(new_tbody, old_tbody);
     // alert("xyz");
 
-for(var append=0;append<data[index].Todo.length;append++){
+for(var append=0,j = 0;append<data[index].Todo.length;append++,j++){
 
 var x = document.createElement("TR");
 x.setAttribute("id","listtr"+append);
@@ -125,13 +127,20 @@ for(var i=0;i<data[index].Todo.length;i++)
         
         if(check.checked == true)
         {
-            table.deleteRow(i);
-            data[index].Todo.splice(i,1);
-            localStorage.setItem("data",JSON.stringify(data));
-            location.reload();    
+
+            
+             table.deleteRow(i);
+             data[index].Todo.pop(i);
+            // localStorage.setItem("data",JSON.stringify(data));
+            // location.reload();    
         }
     
     }
+            localStorage.setItem("data",JSON.stringify(data));
+            location.reload();    
+      
+
+
 }
 
 function done(x){

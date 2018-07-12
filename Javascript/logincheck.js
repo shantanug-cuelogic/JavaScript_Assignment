@@ -12,19 +12,25 @@ function logincheck()
         {
             if(password == data[i].Password)
             {
-                alert("succesfully ");
+                alert("Logged in Succesfully");
+                document.getElementById("unameparent").className="form-group has-success";
+                document.getElementById("passparent").className="form-group has-success";
+
                 localStorage.setItem("username",username);
                 window.location.href="../Pages/list.html";
 
             }
             else
             {
-                alert("password is wrong");
+                document.getElementById("passparent").className="form-group has-error";
+
             }
         }
 
-        else if(username != data[i].Email){
-            alert("username is wrong");
+        else if(i>=data.length){
+            document.getElementById("unameparent").className="form-group has-error";
+            document.getElementById("passparent").className="form-group has-error";
+
         }
     }  
 

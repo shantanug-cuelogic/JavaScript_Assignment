@@ -21,38 +21,72 @@ var Image = document.getElementById("img").value;
 var Address = document.getElementById("addr").value;
 var Password = document.getElementById("pass").value;
 
-console.log(Email.length);
-console.log(Firstname.length);
 
+var checker =0;
 if(validateEmail(Email))
 {
-
-    if(Firstname.length!= 0)
-    {
-            if(Lastname.length!= 0)
-            {
-                
-                register(Email,Firstname,Lastname,Gender,Image,Address,Password);
-              alert("Registered Succesfully");
-               // window.open("list.html", "_self");
-              window.location.href="Pages/list.html";
-            }
-            else
-            {
-                document.getElementById("lname").style.color = "red" ;
-            }
-    }
-    else
-    {
-        document.getElementById("fname").style.color = "red" ;
-    }
-
-
-
+    document.getElementById("emailparent").className="form-group has-success";
+    checker +=1
 }
 
 else{
-    document.getElementById("email").style.color = "red" ;
+    document.getElementById("emailparent").className="form-group has-error";
+    checker =0
+}
+if(Firstname.length!= 0)
+{
+    document.getElementById("fnameparent").className="form-group has-success";
+    checker +=1;
+}
+else
+{
+    document.getElementById("fnameparent").className="form-group has-error";
+    checker =0;
+}
+if(Lastname.length!= 0)
+{
+    document.getElementById("lnameparent").className="form-group has-success";
+    checker +=1;
+}
+else
+{
+    document.getElementById("lnameparent").className="form-group has-error";
+    checker =0;
+    
 }
 
+if(Password.length!= 0)
+{
+    document.getElementById("passparent").className="form-group has-success";
+    checker +=1;
+}
+else
+{
+    document.getElementById("passparent").className="form-group has-error";
+    checker =0;
+}
+// console.log(Address.length);
+//         if(Address.length!= 0)
+//         {
+//             document.getElementById("addrparent").className="form-group has-success";
+//             checker +=1;
+//         }
+//         else
+//         {
+//             document.getElementById("addrparent").className="form-group has-error";
+//             checker =0;
+//         }
+
+
+if(checker == 4)
+    {
+        register();
+        alert("Registered Succesfully");
+   // window.open("list.html", "_self");
+         window.location.href="Pages/list.html";
+    }
+    else if(checker==0)
+    {
+        alert("Please Fill All The Details");
+    }
 }

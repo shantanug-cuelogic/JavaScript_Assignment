@@ -82,7 +82,7 @@ var todoobj = {
     Todonote:Todonote,
     Status: "Pending",
 }
-
+alert("Created TODO Succesfully");
 data[index].Todo.push(todoobj);
 localStorage.setItem("data",JSON.stringify(data));
 
