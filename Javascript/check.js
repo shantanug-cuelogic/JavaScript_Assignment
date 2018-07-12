@@ -17,7 +17,7 @@ var Email = document.getElementById("email").value;
 var Firstname = document.getElementById("fname").value;
 var Lastname = document.getElementById("lname").value;
 var Gender = document.getElementById("gen").value;
-var Image = document.getElementById("img").value;
+var Image = document.getElementById("img").files[0];
 var Address = document.getElementById("addr").value;
 var Password = document.getElementById("pass").value;
 
@@ -78,9 +78,27 @@ else
 //         }
 
 
+function getBase64(file) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+   
+    reader.onload = function () {
+      var path= reader.result;
+        console.log(path);
+      getresult(path);
+   
+    };
+    reader.onerror = function (error) {
+      console.log('Error: ', error);
+    };
+ }
+
+ getBase64(Image);
+function getresult(path){
+
 if(checker == 4)
     {
-        register();
+        register(path);
         alert("Registered Succesfully");
    // window.open("list.html", "_self");
          window.location.href="Pages/list.html";
@@ -89,4 +107,5 @@ if(checker == 4)
     {
         alert("Please Fill All The Details");
     }
+}
 }

@@ -16,6 +16,12 @@ for(var i=0; i<data.length;i++ )
 
 var fullname = data[index].Firstname + " " + data[index].Lastname;
 document.getElementById('hname').innerHTML=fullname;
+
+////////////////////////////////////////
+
+////////////////////////////////////////////
+document.getElementById("userimage").src=data[index].Image;
+
 function logout()
 {
     localStorage.setItem("username",null);
@@ -41,6 +47,7 @@ function showtable(){
     // populate_with_new_rows(new_tbody);
     // old_tbody.parentNode.replaceChild(new_tbody, old_tbody);
     // alert("xyz");
+    var data= JSON.parse(localStorage.getItem("data"));
 
 for(var append=0,j = 0;append<data[index].Todo.length;append++,j++){
 
@@ -59,7 +66,7 @@ document.getElementById("listtable").appendChild(x);
     document.getElementById("listtr"+append).appendChild(a);
 
     var s =document.createElement("TD");
-    var t =document.createTextNode(append);
+    var t =document.createTextNode(append+1);
     s.appendChild(t);   
     document.getElementById("listtr"+append).appendChild(s);
 
@@ -130,7 +137,7 @@ for(var i=0;i<data[index].Todo.length;i++)
 
             
              table.deleteRow(i);
-             data[index].Todo.pop(i);
+             data[index].Todo.splice(i,1);
             // localStorage.setItem("data",JSON.stringify(data));
             // location.reload();    
         }

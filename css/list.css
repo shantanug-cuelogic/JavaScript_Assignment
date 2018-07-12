@@ -66,8 +66,16 @@ display: inline;
 font-weight: bolder;  
 
 }
-
-
+#imagesection{
+    height: 50px;
+    margin-bottom: 10px;
+   
+ 
+}
+#imagecontainer{
+    
+    text-align: center;
+}
 table{
     margin:0px auto;
 }

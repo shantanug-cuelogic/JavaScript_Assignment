@@ -14,17 +14,23 @@ function arraycheck()
 
 }
 
-function register(){
+
+
+
+function register(Image){
     var database = arraycheck();
     var Email = document.getElementById("email").value;
     var Firstname = document.getElementById("fname").value;
     var Lastname = document.getElementById("lname").value;
     var Gender = document.getElementById("gen").value;
-   var Image = document.getElementById("img").value;
+   //var Image = document.getElementById("img").value;
     var Address = document.getElementById("addr").value;
     var Password = document.getElementById("pass").value;
 
-        
+    //var Image = document.getElementById('img').files[0];
+    
+   
+
      var newdb = {Email: Email,
       Firstname: Firstname ,
       Lastname : Lastname ,
@@ -36,8 +42,9 @@ function register(){
      }
 
     database.push(newdb);
-    console.log(database);
+    console.log(Image);
 
+   
     localStorage.setItem("data",JSON.stringify(database));
     localStorage.setItem("username",Email);
 
