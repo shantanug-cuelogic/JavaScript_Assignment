@@ -31,7 +31,8 @@ function register(Image){
     
    
 
-     var newdb = {Email: Email,
+     var newdb = {
+    Email: Email,
       Firstname: Firstname ,
       Lastname : Lastname ,
       Gender : Gender ,

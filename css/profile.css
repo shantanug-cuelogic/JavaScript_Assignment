@@ -1,8 +1,16 @@
+.wrapper{
+    width:1120px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 header{
     background-color: rgba(0, 0, 0, 0.9);
     height: 70px;
     border-radius: 30px;
 }
+
+
 
 #heading{
     float: left;
@@ -39,3 +47,27 @@ nav{
    nav input:hover{
        background-color: orange;
    }
+   #usercontainer{
+       
+    background-color: orange;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 25px;
+
+}
+
+#hname{
+font-weight: bolder;  
+
+}
+#imagesection{
+    height: 50px;
+    margin-bottom: 10px;
+   
+ 
+}
+#imagecontainer{
+    
+    text-align: center;
+}

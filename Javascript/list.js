@@ -21,7 +21,7 @@ document.getElementById('hname').innerHTML=fullname;
 
 ////////////////////////////////////////////
 document.getElementById("userimage").src=data[index].Image;
-
+//console.log(data[index].Image);
 function logout()
 {
     localStorage.setItem("username",null);
@@ -126,25 +126,33 @@ document.getElementById("listtable").appendChild(x);
 
 
 function deletetodo()
-{   var table = document.getElementById("listtable");
-for(var i=0;i<data[index].Todo.length;i++)
+{  
+    var checker =0;
+    var table = document.getElementById("listtable");
+for(var i=data[index].Todo.length-1;i>=0;i--)
     { 
+        
         var check=document.getElementById('selectdata'+i);
-    
+       // console.log(check);
         
         if(check.checked == true)
         {
-
-            
-             table.deleteRow(i);
-             data[index].Todo.splice(i,1);
-            // localStorage.setItem("data",JSON.stringify(data));
-            // location.reload();    
+            console.log(i);  
+           checker+=1;
+              table.deleteRow(i+1);
+              data[index].Todo.splice(i,1);
+             localStorage.setItem("data",JSON.stringify(data));
+              location.reload();    
         }
     
     }
-            localStorage.setItem("data",JSON.stringify(data));
-            location.reload();    
+console.log(checker);
+    if(checker==0)
+    {
+        alert("Select Checkbox to Delete Todo");
+    }
+            //localStorage.setItem("data",JSON.stringify(data));
+            //location.reload();    
       
 
 

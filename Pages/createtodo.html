@@ -32,22 +32,22 @@
                         <div class="col-sm-12 row">    
                     <form>
                                             
-                         <div class="form-group col-sm-4 well">
-                            <label for="tname">Todo Name:</label>
+                         <div class="form-group col-sm-4 well" id="tnameparent">
+                            <label for="tname">Todo Name(*):</label>
                              <input type="text" class="form-control" id="tname" placeholder="Enter Todo Name" name="tname">
                         </div>
                                    
-                        <div class="form-group col-sm-4 well" style="height: 100px">
-                            <label for="category">Select Category:</label>
+                        <div class="form-group col-sm-4 well" style="height: 100px" id="categoryparent">
+                            <label for="category">Select Category(*):</label>
                                 <select id="category">
-                                    <option>Personal</option>
+                                    <option selected disabled hidden>Choose here</option>                                    <option>Personal</option>
                                     <option>Office</option>
                                     <option>Social</option>
                                 </select>
                         </div>         
                      
-                        <div class=" form-group col-sm-4 well">
-                                <label for="duedate">Due Date:</label>
+                        <div class=" form-group col-sm-4 well" id="duedateparent">
+                                <label for="duedate">Due Date(*):</label>
                                 <input type="date" class="form-control" id="duedate" name="date">    
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                         <label for="publiccheck">Make TODO public</label>   
                         <input type="checkbox" id="publiccheck" name="publiccheck" >   
                     </div>
-                        <div class="col-sm-4 well" style="height: 140px;">
+                        <div class="col-sm-4 well" style="height: 140px;" id="todonoteparent">
                             <label for="todonote" style="display: block;">Add Todo Note:</label>
                             <textarea id="todonote" rows="3" cols="30"></textarea>
                         </div>
