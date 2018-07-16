@@ -69,32 +69,30 @@ function savecontent(){
     
     
     
-
+function getimgbase64(Image){
     var reader = new FileReader();
     reader.readAsDataURL(Image);
    
     reader.onload = function () {
       
-        reader.result;
+        var imgdata = reader.result;
         
-      //console.log(reader.result);
+        localStorage.setItem("tempimgdata",imgdata);
+    
     };
 
-    //console.log(reader.onload.result);
     reader.onerror = function (error) {
-      //console.log('Error: ', error);
     };
  
-
+}
 //console.log(reader.result);
 
-    function getimage(path){
-        data[index].Image=path;
-        localStorage.setItem("data",JSON.stringify(data));
+getimgbase64(Image);
+alert("in function");
+data[index].Image = localStorage.getItem("tempimgdata"); 
+  // localStorage.setItem("tempimgdata",null);
 
-    }
-    var 
-    localStorage.setItem("data",JSON.stringify(data));
-    location.reload();
+   localStorage.setItem("data",JSON.stringify(data));
+  location.reload();
 
 }   
